@@ -1,0 +1,15 @@
+name: First Workflow
+on: [push]
+
+jobs: #jobs list
+    run-shell-commands: #job name
+        runs-on: ubuntu-latest  # host config. more at https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners#supported-runners-and-hardware-resources
+        steps:
+            - name: echo a string   # name of the step the mandatory first field
+              run: echo "Hello World"  # the run field is self explanatory
+            - name: Multiline Command
+              run: |
+                node -v
+                npm -v 
+            # Check the node version and the npm version
+            
