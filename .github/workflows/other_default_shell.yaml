@@ -1,0 +1,22 @@
+name: Working Dirs and Shells
+on: [push]
+defaults:
+    run:
+        shell: python    # Sets the shell to python to all machines
+jobs:
+    display-wd-ubuntu-info-python:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Display Working Directory and List Files
+              run: |
+               import os
+               print(os.getcwd())
+               print(os.environ)
+    display-wd-windows-info-python:
+        runs-on: windows-latest
+        steps:
+            - name: Display Working Directory and List Files
+              run: |
+                import os
+                print(os.getcwd())
+                print(os.environ)
