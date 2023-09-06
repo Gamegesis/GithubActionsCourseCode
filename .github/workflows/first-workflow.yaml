@@ -12,4 +12,17 @@ jobs: #jobs list
                 node -v
                 npm -v 
             # Check the node version and the npm version
-            
+    parallel-job-macos:
+        runs-on: macos-latest
+        steps:
+            - name: View SW Version
+              run: sw_vers
+    depends-on-first:
+        runs-on: windows-latest
+        needs: [run-shell-commands]
+        steps:
+            - name: print a string
+              run: Write-Output "Windows Echoeing"
+            - name: Error Step
+              run: errorcommand
+              
