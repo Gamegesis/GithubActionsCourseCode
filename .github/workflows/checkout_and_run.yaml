@@ -20,7 +20,7 @@ jobs:
         needs: [checkout-and-display-files]
         steps:
             - name: run python code
-              run: python sample_code.py
+              run: python ./sample_code.py
 
             
         
