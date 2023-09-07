@@ -6,7 +6,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: List Files Before
-              run: ls -a
+              run: |
+                pwd
+                ls -a
             - name: Checkout Repo
               run: |
                 git init
@@ -14,13 +16,18 @@ jobs:
                 git fetch origin
                 git checkout main
             - name: list files after
-              run: ls -a
+              run: |
+                pwd
+                ls -a
     depends-on-first:
         runs-on: ubuntu-latest
         needs: [checkout-and-display-files]
         steps:
             - name: run python code
-              run: python ../sample_code.py
+              run: |
+                pwd
+                ls -a
+                python ./sample_code.py
 
             
         
