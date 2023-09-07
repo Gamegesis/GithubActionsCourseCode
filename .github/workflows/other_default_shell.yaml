@@ -2,7 +2,8 @@ name: Working Dirs and Shells
 on: [push]
 defaults:
     run:
-        shell: python    # Sets the shell to python to all machines
+        shell: python    # Sets the shell to python to all machines - This command can be set on individual machines, after runs-on (from defaults to here)
+        #working-directory: /dir/new/
 jobs:
     display-wd-ubuntu-info-python:
         runs-on: ubuntu-latest
@@ -12,6 +13,10 @@ jobs:
                import os
                print(os.getcwd())
                print(os.environ)
+            - name: new working dir
+              shell: bash
+              working-directory: /home/runner
+              run: pwd
     display-wd-windows-info-python:
         runs-on: windows-latest
         steps:
@@ -20,3 +25,10 @@ jobs:
                 import os
                 print(os.getcwd())
                 print(os.environ)
+            - name: Display Working Directory step with powershell
+              shell: pwsh
+              run: Get-Location
+
+                
+
+
