@@ -26,4 +26,6 @@ jobs:
     log-info:
         runs-on: ubuntu-latest
         steps:
-            - run: echo $GITHUB_REF
+            - run: |
+               echo $GITHUB_REF
+               echo "Runner Name: ${{ inputs.runner_name }}"
