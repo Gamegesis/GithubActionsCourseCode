@@ -1,4 +1,4 @@
-name: Working Dirs and Shells
+name: 03_Working Dirs and Other Shells
 on: [push]
 defaults:
     run:

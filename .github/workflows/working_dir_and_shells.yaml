@@ -1,4 +1,4 @@
-name: Working Dirs and Shells
+name: 02_Working Dirs and Shells
 on: [push]
 jobs:
     display-wd-ubuntu-info:

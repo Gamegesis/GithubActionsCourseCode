@@ -1,4 +1,4 @@
-name: Checkout Repo
+name: 04_Checkout Repo
 on: [push]
 
 jobs: 

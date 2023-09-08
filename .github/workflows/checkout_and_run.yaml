@@ -1,4 +1,4 @@
-name: Checkout Repo and Run code
+name: 05_Checkout Repo and Run code
 on: [push]
 
 jobs: 

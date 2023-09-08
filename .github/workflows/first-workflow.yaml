@@ -1,4 +1,4 @@
-name: First Workflow
+name: 01_First Workflow
 on: [push]
 
 jobs: #jobs list
@@ -25,4 +25,4 @@ jobs: #jobs list
               run: Write-Output "Windows Echoeing"
             - name: Error Step
               run: errorcommand
-              
+

@@ -1,4 +1,4 @@
-name: Using a simple action
+name: 06_Using a simple action
 on: [push]
 
 jobs:
@@ -12,4 +12,3 @@ jobs:
                 who-to-greet: Gamegesis
             - name: Log greeting time
               run: echo "${{ steps.greet.outputs.time }}"
-              
