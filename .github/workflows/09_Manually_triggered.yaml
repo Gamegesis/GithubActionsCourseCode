@@ -1,6 +1,27 @@
 name: 09_Manually_Triggered_Workflow
 on:
     workflow_dispatch: 
+        inputs:
+            runner_name:
+                description: Runner name
+                type: string
+                required: true
+                default: "unnamed runner"
+            runner_age:
+                description: Runner Age
+                default: 19
+                type: number
+                required: true
+            runner_status:
+                description: Runner Status
+                required: true
+                type: choice
+                default: "Single"
+                options:
+                    - Single
+                    - Married
+                    - Divorced
+                    - It's Complicated
 jobs:
     log-info:
         runs-on: ubuntu-latest
