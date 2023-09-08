@@ -1,0 +1,36 @@
+name: Checkout Repo and Run code
+on: [push]
+
+jobs: 
+    checkout-action:
+      runs-on: ubuntu-latest
+      steps:
+        - name: list files before
+          run: |
+              pwd
+              ls -a
+        - uses: action/checkout@v3
+        - name: list files after
+          run: |
+            pwd
+            ls -a
+            python ./sample_code.py
+
+    checkout-and-display-files-and-run:
+        runs-on: ubuntu-latest
+        steps:
+            - name: List Files Before
+              run: |
+                pwd
+                ls -a
+            - name: Checkout Repo
+              run: |
+                git init
+                git remote add origin "https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git"
+                git fetch origin
+                git checkout main
+            - name: list files after and run code
+              run: |
+                pwd
+                ls -a
+                python ./sample_code.py
