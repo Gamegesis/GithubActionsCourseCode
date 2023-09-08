@@ -1,0 +1,10 @@
+name: 08_Workflows_Relations
+on:
+    workflow_run: 
+        workflows: [07_Checkout Repo and Run code]
+        types: [completed]
+jobs:
+    echo-string:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "Workflow 7 completed"
