@@ -30,7 +30,7 @@ jobs:
               run: | 
                  dir
                  testmsbuild.bat
-                 echo "End Code!"
+                 echo "End Code !"
                  
     
                 
