@@ -23,7 +23,7 @@ jobs:
     test-msbuild-validity:
         runs-on: windows-latest
         steps:
-            - name: Checkout the Repo (again!)
+            - name: Checkout the Repo again
               run: dir
             - uses: actions/checkout@v3
             - name: list files and run script
