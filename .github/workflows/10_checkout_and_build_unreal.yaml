@@ -7,11 +7,11 @@ jobs:
         steps:
             - name: List Files Before
               run: |
-                ls -a
+                ls
             - uses: actions/checkout@v3
               with:
                 repository: 'https://github.com/EpicGames/UnrealEngine'
                 lfs: true
             - name: list files after and run code
               run: |
-                ls -a
+                ls
