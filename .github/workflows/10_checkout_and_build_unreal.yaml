@@ -1,0 +1,17 @@
+name: 10_checkout_and_build_unreal
+on: [workflow_dispatch]
+
+jobs: 
+    checkout-unreal-and-build:
+        runs-on: windows-latest
+        steps:
+            - name: List Files Before
+              run: |
+                ls -a
+            - uses: actions/checkout@v3
+              with:
+                repository: 'https://github.com/EpicGames/UnrealEngine'
+                lfs: true
+            - name: list files after and run code
+              run: |
+                ls -a
