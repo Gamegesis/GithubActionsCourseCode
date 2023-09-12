@@ -12,6 +12,7 @@ jobs:
               with:
                 repository: 'https://github.com/EpicGames/UnrealEngine'
                 lfs: true
+                ref: release
             - name: list files after and run code
               run: |
                 ls
