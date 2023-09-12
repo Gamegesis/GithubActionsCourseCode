@@ -3,7 +3,7 @@ on: [workflow_dispatch]
 
 jobs: 
     checkout-unreal-and-build:
-        runs-on: windows-latest
+        runs-on: self-hosted
         steps:
             - name: List Files Before
               run: |
