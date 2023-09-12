@@ -14,6 +14,10 @@ jobs:
                 ref: release
                 token: ${{ secrets.PERSONAL_TOKEN }}
                 repository: EpicGames/UnrealEngine
+                path: Unreal
             - name: list files after and run code
               run: |
+                cd Unreal
                 ls
+                .\Setup.bat
+                
