@@ -8,11 +8,12 @@ jobs:
             - name: List Files Before
               run: |
                 ls
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
               with:
-                repository: 'https://github.com/EpicGames/UnrealEngine'
                 lfs: true
                 ref: release
+                token: ${{ secrets.PERSONAL_TOKEN }}
+                repository: EpicGames/UnrealEngine
             - name: list files after and run code
               run: |
                 ls
